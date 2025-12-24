@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>किलबिल - Shala Newsletter Archive</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffebcc 0%, #ffe6e6 50%, #fff4e6 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            padding: 40px 20px;
+        }
+
+        .logo {
+            max-width: 250px;
+            height: auto;
+            margin: 0 auto 30px;
+            display: block;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+            color: #8b2e2e;
+        }
+
+        header p {
+            font-size: 1.3em;
+            opacity: 1;
+            color: #b8562e;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.3);
+        }
+
+        .newsletter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .newsletter-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid #d4693d;
+        }
+
+        .newsletter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            border-top-color: #f5a623;
+        }
+
+        .newsletter-card h2 {
+            color: #8b2e2e;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .newsletter-card .date {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .newsletter-card .description {
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .btn-read {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4693d 0%, #f5a623 100%);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-read:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(212, 105, 61, 0.4);
+            background: linear-gradient(135deg, #c45a2e 0%, #e69515 100%);
+        }
+
+        footer {
+            text-align: center;
+            color: #8b2e2e;
+            padding: 30px;
+            opacity: 0.9;
+        }
+
+        footer a {
+            color: #8b2e2e;
+            text-decoration: underline;
+        }
+
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, #8b2e2e 0%, #d4693d 50%, #f5a623 100%);
+            max-width: 600px;
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                max-width: 200px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            .newsletter-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="HMM Marathi Shala Logo" class="logo">
+            <div class="divider"></div>
+            <h1>किलबिल Newsletter Archive</h1>
+            <p>किलबिल - A Digital Newsletter for Young Marathi Learners</p>
+        </header>
+
+        <div class="newsletter-grid">
+            <div class="newsletter-card">
+                <h2>किलबिल अंक #1 | Newsletter #1</h2>
+                <p class="date">पहिला अंक | First Edition</p>
+                <p class="description">
+                    किलबिल च्या पहिल्या अंकामध्ये आपले स्वागत आहे! Welcome to the first edition of किलबिल! 
+                    Discover engaging content designed to help young learners explore and enjoy the Marathi language 
+                    through stories, activities, and more. गोष्टी, उपक्रम आणि बरेच काही यांच्याद्वारे मराठी भाषा शिका आणि आनंद घ्या.
+                </p>
+                <a href="https://mailchi.mp/fa4669d4bfb3/a-digital-newsletter-for-young-marathi-learners" 
+                   class="btn-read" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    वाचा | Read Newsletter →
+                </a>
+            </div>
+
+            <div class="newsletter-card">
+                <h2>किलबिल अंक #2 | Newsletter #2</h2>
+                <p class="date">दुसरा अंक | Second Edition</p>
+                <p class="description">
+                    किलबिल चा दुसरा अंक तरुण मराठी शिकणाऱ्यांसाठी आणखी रोमांचक सामग्री घेऊन येतो! 
+                    The second edition brings more exciting content for young Marathi learners. 
+                    Explore new stories, learning activities, and resources to enhance language skills. 
+                    नवीन गोष्टी, शिकण्याचे उपक्रम आणि भाषा कौशल्ये वाढवणारी साधने शोधा.
+                </p>
+                <a href="https://mailchi.mp/f7be09ec51c7/a-digital-newsletter-for-young-marathi-learners-1401867" 
+                   class="btn-read" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    वाचा | Read Newsletter →
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>किलबिल च्या आणखी अंकांची प्रतीक्षा करा! | Stay tuned for more editions of किलबिल!</p>
+            <p style="margin-top: 10px;">
+                <small>तरुण मराठी शिकणाऱ्यांसाठी प्रेमाने तयार केले | Built with ❤️ for young Marathi learners</small>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
