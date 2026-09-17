@@ -259,7 +259,7 @@ svg.maze{width:100%;height:auto;display:block;touch-action:none;border-radius:10
   .tab small{font-size:7.5px}
 }
 .tabnote{
-  margin:14px 0 0;padding:11px 14px;border-radius:12px;
+  margin:22px 0 0;padding:11px 14px;border-radius:12px;
   background:rgba(242,169,59,.12);border-left:3px solid var(--marigold);
   font-size:14px;line-height:1.6;color:var(--ivory);
 }
@@ -382,7 +382,7 @@ footer a{color:var(--marigold);text-decoration:none;border-bottom:1px solid rgba
 
 <section>
   <dl class="details">
-    <div class="det full"><dt>या अंकात</dt><dd><span class="dv">गोष्ट, आरती, अष्टविनायक, कोडी, खेळ, स्पर्धा</span><small>वरच्या टॅबमध्ये सहा भाग</small></dd></div>
+    <div class="det full"><dt>या अंकात</dt><dd><span class="dv">गोष्ट, आरती, अष्टविनायक, कोडी, खेळ, स्पर्धा</span><small>खालच्या टॅबमध्ये सहा भाग</small></dd></div>
   </dl>
 
   <div class="card">
@@ -393,6 +393,8 @@ footer a{color:var(--marigold);text-decoration:none;border-bottom:1px solid rgba
 
 </section>
 
+<p class="tabnote"><b>Six sections.</b> Tap the tabs below to move between them — the aartis, the eight temples, the puzzles, a Ganpati to colour in, and the photo we would love you to send.</p>
+
 <nav class="tabs" role="tablist" aria-label="अंकाचे भाग">
   <button class="tab" type="button" role="tab" id="t-goshta" data-p="goshta" aria-controls="p-goshta" aria-selected="false"><b>गोष्ट</b><small>Story</small></button>
   <button class="tab" type="button" role="tab" id="t-aarti" data-p="aarti" aria-controls="p-aarti" aria-selected="false"><b>आरती</b><small>Aarti</small></button>
@@ -401,8 +403,6 @@ footer a{color:var(--marigold);text-decoration:none;border-bottom:1px solid rgba
   <button class="tab" type="button" role="tab" id="t-khel" data-p="khel" aria-controls="p-khel" aria-selected="false"><b>खेळ</b><small>Games</small></button>
   <button class="tab" type="button" role="tab" id="t-spardha" data-p="spardha" aria-controls="p-spardha" aria-selected="false"><b>स्पर्धा</b><small>Photo</small></button>
 </nav>
-
-<p class="tabnote"><b>Six sections.</b> Tap the tabs above to move between them — the aartis, the eight temples, the puzzles, a Ganpati to colour in, and the photo we would love you to send.</p>
 
 <div class="panel" id="p-goshta" role="tabpanel" aria-labelledby="t-goshta">
 <!-- ============ STORY ============ -->
@@ -1239,7 +1239,7 @@ var VOCAB = [
  ["ढोल-ताशा","dhol-tasha","मिरवणुकीत वाजणारी वाद्यं. The drums played in the procession."],
  ["उंदीर","undir","बाप्पाचं वाहन. The mouse, his vehicle."],
  ["शाडू","shadu","मूर्ती घडवायची नैसर्गिक माती. The natural clay idols are made from."],
- ["विसर्जन","visarjan","बाप्पाला निरोप देण्याचा दिवस. The farewell, when he goes to the water."]
+ ["विसर्जन","visarjan","बाप्पाला निरोप देण्याचा दिवस. The farewell, when the murti is immersed in water."]
 ];
 var wbox = $("words");
 VOCAB.forEach(function(v){
@@ -1254,7 +1254,7 @@ VOCAB.forEach(function(v){
 
 /* ---------------- word search ---------------- */
 var GRID = [["ज", "मा", "य", "म", "ग", "त", "ह", "को", "ढो", "ड"], ["रा", "ला", "डू", "ट", "ता", "सा", "ख", "को", "ढो", "त"], ["सो", "थ", "डू", "की", "ना", "शा", "म", "क", "थ", "ख"], ["ढो", "ल", "क", "ढो", "की", "ढो", "गा", "ख", "रा", "स"], ["रा", "चा", "बा", "पा", "आ", "र", "ती", "म", "र", "चा"], ["पा", "प", "बा", "व", "उं", "र", "मो", "द", "क", "तो"], ["ख", "बा", "ती", "ल", "ढो", "दी", "डू", "मं", "ड", "प"], ["को", "ग", "ण", "प", "ती", "हा", "र", "द", "म", "गा"], ["उं", "डू", "डू", "य", "ड", "ट", "फू", "ह", "मा", "दी"], ["थ", "डू", "ल", "ना", "उं", "थ", "ल", "ल", "ण", "तो"]];
-var PLACED = {"गणपती": [[7, 1], [7, 2], [7, 3], [7, 4]], "मोदक": [[5, 6], [5, 7], [5, 8]], "मखर": [[2, 6], [3, 7], [4, 8]], "आरती": [[4, 4], [4, 5], [4, 6]], "उंदीर": [[5, 4], [6, 5], [7, 6]], "मंडप": [[6, 7], [6, 8], [6, 9]], "ढोल": [[3, 0], [3, 1]], "ताशा": [[1, 4], [2, 5]], "लाडू": [[1, 1], [2, 2]], "फूल": [[8, 6], [9, 7]]};
+var PLACED = {"मोदक":[[[5,6],[5,7],[5,8]]],"गणपती":[[[7,1],[7,2],[7,3],[7,4]]],"मखर":[[[2,6],[3,7],[4,8]]],"आरती":[[[4,4],[4,5],[4,6]]],"ढोल":[[[3,0],[3,1]]],"ताशा":[[[1,4],[2,5]]],"लाडू":[[[1,1],[1,2]],[[1,1],[2,2]]],"उंदीर":[[[5,4],[6,5],[7,6]]],"मंडप":[[[6,7],[6,8],[6,9]]],"फूल":[[[8,6],[9,6]],[[8,6],[9,7]]]};
 var WORDS = ["मोदक", "गणपती", "मखर", "आरती", "ढोल", "ताशा", "लाडू", "उंदीर", "मंडप", "फूल"];
 var sel = {}, done = {};
 
@@ -1284,16 +1284,21 @@ function tap(btn, r, c){
 function check(){
   WORDS.forEach(function(w){
     if (done[w]) return;
-    var cells = PLACED[w];
-    var all = cells.every(function(p){ return sel[key(p[0],p[1])]; });
-    if (!all) return;
-    done[w] = 1;
-    cells.forEach(function(p){
-      var el = gbox.querySelector('[data-k="'+key(p[0],p[1])+'"]');
-      el.setAttribute("data-found","1"); el.removeAttribute("data-on");
-      delete sel[key(p[0],p[1])];
-    });
-    lbox.querySelector('[data-w="'+w+'"]').setAttribute("data-done","1");
+    // a word may legitimately read in more than one place; accept any of them
+    var paths = PLACED[w];
+    for (var i = 0; i < paths.length; i++){
+      var cells = paths[i];
+      var all = cells.every(function(p){ return sel[key(p[0],p[1])]; });
+      if (!all) continue;
+      done[w] = 1;
+      cells.forEach(function(p){
+        var el = gbox.querySelector('[data-k="'+key(p[0],p[1])+'"]');
+        el.setAttribute("data-found","1"); el.removeAttribute("data-on");
+        delete sel[key(p[0],p[1])];
+      });
+      lbox.querySelector('[data-w="'+w+'"]').setAttribute("data-done","1");
+      break;
+    }
   });
   $("wsfound").textContent = Object.keys(done).length;
 }
